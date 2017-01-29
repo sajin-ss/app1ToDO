@@ -1,0 +1,11 @@
+{{outlet}}
+<div class="container">
+	<h2>Tasks</h2>
+
+	{{#each model as |task|}}
+		<li> {{task.title}} </li> 
+		<li> {{task.status}} </li> 
+		<br>
+	{{/each}}
+</div>
+

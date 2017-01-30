@@ -12,6 +12,20 @@ export default Ember.Controller.extend({
 				status: Status
 			});
 
+
+			// this.get('store').push({
+			// 		data: [
+			// 		{	
+			// 			// id : 2,
+			// 			type : 'task',
+			// 			attributes : {
+			// 				title: Title,
+			// 				status: Status
+			// 			}
+			// 		}
+			// 		]
+			// 	});
+
 			console.log('Added');
 
 			// var tasks = this.get('store').findAll('mytasks');

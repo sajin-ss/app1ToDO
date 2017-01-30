@@ -1,10 +1,41 @@
 {{outlet}}
 <div class="container">
 	<h2>Tasks</h2>
-
-	{{#each model as |task|}}
+	<!-- <ol>
+	 {{#each model as |task|}}
+	 <li>
+	 	<ul>
 		<li> {{task.title}} </li> 
 		<li> {{task.status}} </li> 
 		<br>
+		</ul>
+	 </li>
 	{{/each}}
+	</ol> -->
+
+
+	<section id="main">
+        <!-- <ul id="todo-list"> -->
+          <!-- <li class="completed"> -->
+            <!-- <input type="checkbox" class="toggle"> -->
+          <!-- </li> -->
+          {{#each model as |task|}}
+          <!-- <li> -->
+          <div class="row">
+  			<div class="col-md-6 form-group">
+            	<input type="checkbox" class="toggle">
+            	<label><h3> {{task.title}} </h3></label>
+  			</div>
+  			<div class="col-md-6">
+            		<button {{action 'editToDo'}} class="btn btn-warning">Edit</button>
+            		<button {{action 'removeToDo'}} class="btn btn-danger">Delete</button>
+  			</div>
+		  </div>
+          <!-- </li> -->
+          {{/each}}
+        <!-- </ul> -->
+      
+        <!-- <input type="checkbox" id="toggle-all"> -->
+      </section>
+
 </div>

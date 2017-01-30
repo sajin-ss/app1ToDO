@@ -25,5 +25,5 @@ export default function() {
   */
 
   this.get('tasks');
-  // this.get('/mytasks/:id');
+  this.get('/tasks/:id');
 }

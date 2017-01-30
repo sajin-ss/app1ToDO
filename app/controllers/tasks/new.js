@@ -11,6 +11,7 @@ export default Ember.Controller.extend({
 				title: Title,
 				status: Status
 			});
+			taskSet.save();
 
 
 			// this.get('store').push({
@@ -37,7 +38,6 @@ export default Ember.Controller.extend({
 				status : ''
 			});
 
-			// taskSet.save();
 
 
 		}

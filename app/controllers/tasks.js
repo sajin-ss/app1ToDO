@@ -6,9 +6,9 @@ export default Ember.Controller.extend({
 			console.log('deleting');
 
 
-			store.findRecord('post', 2).then(function(post) {
-			  post.destroyRecord(); // => DELETE to /posts/2
-			});
+			// store.findRecord('post', 2).then(function(post) {
+			//   post.destroyRecord(); // => DELETE to /posts/2
+			// });
 
 
 			// var todo = this.get('task');

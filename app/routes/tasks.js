@@ -20,7 +20,7 @@ export default Ember.Route.extend({
 				// 	]
 				// });
 
-		return this.store.findAll('task');
+		return this.get('store').findAll('task');
 		
 	}
 });

@@ -6,13 +6,13 @@ export default Ember.Controller.extend({
 			console.log('deleting');
 
 
-			// store.findRecord('post', 2).then(function(post) {
-			//   post.destroyRecord(); // => DELETE to /posts/2
-			// });
+			this.store.findRecord('task', 2).then(function(task) {
+			  task.destroyRecord(); // => DELETE to /posts/2
+			});
 
 
 			// var todo = this.get('task');
-			// console.log(todo);
+			// console.log('asdf' + todo);
    //  		store.deleteRecord(todo);
 		},
 

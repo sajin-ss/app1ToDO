@@ -31,4 +31,21 @@ export default function() {
   // this.get('/tasks/:id');
 
 
+  this.del('/tasks/:id',function(store, request) {
+    //console.log(attrs.id);
+    var id = request.params.id;
+    console.log(id);
+    store.tasks.remove(id);
+
+    
+
+
+    return {
+        data: store.tasks.map(attrs => (
+            {type: 'tasks', attributes: attrs }
+        ))
+    };
+
+
+  });
 }

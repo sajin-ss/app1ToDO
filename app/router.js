@@ -10,6 +10,13 @@ Router.map(function() {
   this.route('tasks', function() {
     this.route('new');
   });
+
+
 });
 
 export default Router;
+
+
+// Router.map(function() {  
+//   this.route('posts', {path: '/posts/:post_id'});
+// });

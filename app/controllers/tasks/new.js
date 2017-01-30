@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
 			var Status = this.get('status');
 
 
-			var taskSet = this.store.createRecord('mytasks', {
+			var taskSet = this.store.createRecord('task', {
 				title: Title,
 				status: Status
 			});

@@ -1,12 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-	model() {
-		// return [{
-		// 	title: 'demoTitle',
-		// 	status: 'demoStatus'
-		// }
-		// ];
+	model(param)
+	{
 		return this.store.findAll('task');
 	}
+
 });

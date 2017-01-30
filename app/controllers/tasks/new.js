@@ -14,8 +14,8 @@ export default Ember.Controller.extend({
 
 			console.log('Added');
 
-			var tasks = this.store.findAll('mytasks');
-			console.log(tasks);
+			// var tasks = this.get('store').findAll('mytasks');
+			// console.log(tasks);
 
 
 			this.setProperties({
@@ -23,7 +23,7 @@ export default Ember.Controller.extend({
 				status : ''
 			});
 
-			taskSet.save();
+			// taskSet.save();
 
 
 		}

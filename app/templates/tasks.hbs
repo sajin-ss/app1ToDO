@@ -21,19 +21,40 @@
           <!-- </li> -->
           {{#each model as |task|}}
           <!-- <li> -->
-          <div class="row">
-  			<div class="col-md-6 form-group">
-            	<input type="checkbox" class="toggle">
-              <label><h3> {{task.title}} </h3></label>
-            	<label><h3> {{task.status}} </h3></label>
-  			</div>
-  			<div class="col-md-6">
-            		<button {{action 'editToDo'}} class="btn btn-warning">Edit</button>
-            		<button {{action 'removeToDo'}} class="btn btn-danger">Delete</button>
-  			</div>
-		  </div>
+             <div class="row" {{bind-attr class=" row todo.isEditing:editing"}} >
+
+              {{#if todo.isEditing}}
+  			             <div class="col-md-6 form-group">
+                         	<input type="checkbox" class="toggle">
+                           <label><h3> {{task.title}} </h3></label>
+                         	<label><h3> ------> {{task.status}} </h3></label>
+  			             </div>
+    
+      			        <div class="col-md-6">
+                       		<button {{action 'editToDo' task}} class="btn btn-warning">Edit</button>
+                       		<button {{action 'removeToDo' task}} class="btn btn-danger" >Delete</button>
+      			        </div>
+              {{else}}
+                    <div class="col-md-6 form-group">
+                          <input type="checkbox" class="toggle">
+                           <label><h3> {{task.title}} </h3></label>
+                          <label><h3> ------> {{task.status}} </h3></label>
+                     </div>
+    
+                    <div class="col-md-6">
+                          <button {{action 'editToDo' task}} class="btn btn-warning">Edit</button>
+                          <button {{action 'removeToDo' task}} class="btn btn-danger" >Delete</button>
+                    </div>
+
+
+
+              {{/if}}
+		          </div>
           <!-- </li> -->
           {{/each}}
+
+      <button {{action 'removeToDo'}} class="btn btn-danger">Delete All</button>
+
         <!-- </ul> -->
       
         <!-- <input type="checkbox" id="toggle-all"> -->

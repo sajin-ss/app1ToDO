@@ -1,3 +1,6 @@
+import Mirage from 'ember-cli-mirage';
+
+
 export default function() {
 
   // These comments are here to help you get started. Feel free to delete them.
@@ -28,24 +31,35 @@ export default function() {
   
 
   this.get('tasks');
-  // this.get('/tasks/:id');
+  this.post('tasks');
 
+  this.get('/tasks/:id');
 
-  this.del('/tasks/:id',function(store, request) {
-    //console.log(attrs.id);
-    var id = request.params.id;
-    console.log(id);
-    store.tasks.remove(id);
+  // this.del('/tasks');
+  this.del('/tasks/:id');
+
+this.del('/tasks', function(db, request){
+  console.log('deleting all');
+  task.destroy();
+});
+
+//   this.del('/tasks/:id',function(db, request) {
+//     console.log("------>" + db.tasks);
+//     var id = request.params.id;
+//     // console.log("=>  " + id);
+//     db.tasks.remove(id );
 
     
+// return new Mirage.Response(204, {}, {});
+
+//     // return {
+//     //     data: store.tasks.map(attrs => (
+//     //         {type: 'tasks', attributes: attrs }
+//     //     ))
+//     // };
 
 
-    return {
-        data: store.tasks.map(attrs => (
-            {type: 'tasks', attributes: attrs }
-        ))
-    };
+//   });
 
 
-  });
 }

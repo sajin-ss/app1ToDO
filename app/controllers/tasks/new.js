@@ -11,7 +11,7 @@ export default Ember.Controller.extend({
 				title: Title,
 				status: Status
 			});
-			taskSet.save();
+			taskSet.save();	
 
 
 			// this.get('store').push({

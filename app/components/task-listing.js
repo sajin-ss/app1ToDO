@@ -8,11 +8,24 @@ export default Ember.Component.extend({
 	actions : {
     	removeToDo(params) {
     	  this.attrs.removeToDo(params);
+    	  // this.get('removeToDo')(params);	//documented version
+
     	},
     	editToDo(params)
     	{
+    		// this.$("#edit-btn").fadeOut("slow");
     		this.toggleEdit();
-    		this.attrs.editToDo(params);
+    		this.get('editToDo')(params);
+    		console.log(this.get('newtitle'));	
+
+    	},
+    	saveToDo(params)
+    	{
+    		// this.$("#edit-btn").fadeOut("slow");
+    		var newTitle = (this.get('newtitle'));	
+    		this.toggleEdit();
+    		this.get('saveToDo')(params, newTitle);
     	}
+
 	}
 });

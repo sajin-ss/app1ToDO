@@ -21,7 +21,7 @@
           <!-- </li> -->
           {{#each model as |taskUnit|}}
           <!-- <li> -->
-             {{task-listing removeToDo=(action 'removeToDo') editToDo=(action 'editToDo') task=taskUnit}}
+             {{task-listing removeToDo=(action 'removeToDo') editToDo=(action 'editToDo') saveToDo=(action 'saveToDo') task=taskUnit}}
           <!-- </li> -->
           {{/each}}
 

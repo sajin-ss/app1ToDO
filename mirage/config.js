@@ -38,6 +38,8 @@ export default function() {
   // this.del('/tasks');
   this.del('/tasks/:id');
 
+  this.patch('/tasks/:id');
+
 this.del('/tasks', function(db, request){
   console.log('deleting all');
   task.destroy();

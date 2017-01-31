@@ -1,25 +1,36 @@
 <div class="row {{if isEditing "isEditOn"}}">
 
               {{#if isEditing}}
-  			             <div class="col-md-6 form-group">
+  			             <div class="col-md-4 form-group">
                          	<!-- <input type="textbox" value="{{task.title}}" value=newtitle> -->
                          	{{input type="text" value=newtitle placeholder=task.title}}
                            <!-- <label><h3> {{task.title}} </h3></label> -->
                          	<!-- <label><h3>  {{task.status}} </h3></label> -->
   			             </div>
+
+  			             <div class="col-md-4 form-group">
+                         	<!-- <input type="textbox" value="{{task.title}}" value=newtitle> -->
+                         	{{input type="text" value=newstatus placeholder=task.status}}
+                           <!-- <label><h3> {{task.title}} </h3></label> -->
+                         	<!-- <label><h3>  {{task.status}} </h3></label> -->
+  			             </div>
     
-      			        <div class="col-md-6">
+      			        <div class="col-md-4">
                        		<button {{action 'saveToDo' task}} class="btn btn-success">Save</button>
                        		<button {{action 'removeToDo' task}} class="btn btn-danger">Delete</button>
       			        </div>
               {{else}}
-                    <div class="col-md-6 form-group">
+                    <div class="col-md-4 form-group">
                           <input type="checkbox" class="toggle">
                            <label><h3> {{task.title}} </h3></label>
-                          <label><h3> ------> {{task.status}} </h3></label>
+                     </div>
+
+                     <div class="col-md-4 form-group">
+                          <!-- <input type="checkbox" class="toggle"> -->
+                          <label><h3>{{task.status}} </h3></label>
                      </div>
     
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                           <button {{action 'editToDo' task}} class="btn btn-warning">Edit</button>
                           <button {{action 'removeToDo' task}} class="btn btn-danger" >Delete</button>
                     </div>

@@ -61,7 +61,7 @@ export default Ember.Controller.extend({
     		// todo.save();	
 		},
 
-		saveToDo : function(params, newTitle){
+		saveToDo : function(params, newTitle, newStatus){
 
 			console.log('saving' + params.id);
 			console.log('newtitle' + newTitle);
@@ -77,7 +77,7 @@ export default Ember.Controller.extend({
   			  type: 'task',
   			  attributes: {
   			    title: newTitle,
-  			    status: 'Done'
+  			    status: newStatus
   			  }
   			}
 			});
@@ -92,3 +92,5 @@ export default Ember.Controller.extend({
 		}
 	}
 });
+
+

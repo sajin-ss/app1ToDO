@@ -23,8 +23,9 @@ export default Ember.Component.extend({
     	{
     		// this.$("#edit-btn").fadeOut("slow");
     		var newTitle = (this.get('newtitle'));	
+    		var newStatus = (this.get('newstatus'));	
     		this.toggleEdit();
-    		this.get('saveToDo')(params, newTitle);
+    		this.get('saveToDo')(params, newTitle, newStatus);
     	}
 
 	}

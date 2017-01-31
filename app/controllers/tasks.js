@@ -87,8 +87,8 @@ export default Ember.Controller.extend({
 
 
 
-			var ppp = this.store.findAll('task');
-			console.log(ppp);
+			// var ppp = this.store.findAll('task');
+			// console.log(ppp);
 		}
 	}
 });

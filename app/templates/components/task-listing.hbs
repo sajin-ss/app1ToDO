@@ -1,0 +1,31 @@
+<div class="row {{if isEditing "isEditOn"}}">
+
+              {{#if isEditing}}
+  			             <div class="col-md-6 form-group">
+                         	<input type="textbox" value="{{task.title}}">
+                           <!-- <label><h3> {{task.title}} </h3></label> -->
+                         	<!-- <label><h3>  {{task.status}} </h3></label> -->
+  			             </div>
+    
+      			        <div class="col-md-6">
+                       		<button {{action 'editToDo' task}} class="btn btn-warning">Edit</button>
+                       		<button {{action 'removeToDo' task}} class="btn btn-danger">Delete</button>
+      			        </div>
+              {{else}}
+                    <div class="col-md-6 form-group">
+                          <input type="checkbox" class="toggle">
+                           <label><h3> {{task.title}} </h3></label>
+                          <label><h3> ------> {{task.status}} </h3></label>
+                     </div>
+    
+                    <div class="col-md-6">
+                          <button {{action 'editToDo' task}} class="btn btn-warning">Edit</button>
+                          <button {{action 'removeToDo' task}} class="btn btn-danger" >Delete</button>
+                    </div>
+
+
+
+              {{/if}}
+</div>
+
+		          {{yield}}

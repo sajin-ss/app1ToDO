@@ -1,7 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+	
 	actions: {
+
 		removeToDo : function(params){
 			// console.log('deleting' + params.id);
 
@@ -30,7 +32,7 @@ export default Ember.Controller.extend({
 
 			// var todo = this.get('task');
 			// console.log('asdf' + todo);
-   //  		store.deleteRecord(todo);
+   	//  		store.deleteRecord(todo);
     		// todo.save();
 
 		},
@@ -41,8 +43,10 @@ export default Ember.Controller.extend({
 			// $("#edit-btn").removeClass('btn-warning');
 			// $("#edit-btn").addClass('btn-success');
 			// $("#edit-btn").html('Save');
-			this.$().removeClass('btn-warning');
+			// this.toggleProperty('isEditing', true);
+			// console.log(isEditing);
 
+	
 
 			this.store.findRecord('task', params.id).then(function (task) {
 				
